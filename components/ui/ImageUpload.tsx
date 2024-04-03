@@ -14,7 +14,8 @@ interface ImageUploadProps{
 }
 
 const ImageUpload:FC<ImageUploadProps>=({disabled,onChange,onRemove,value}) => {
-
+ 
+  
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -44,7 +45,7 @@ const ImageUpload:FC<ImageUploadProps>=({disabled,onChange,onRemove,value}) => {
         ))
         }
       </div>
-      <CldUploadWidget onSuccess={onUpload} uploadPreset='t6rstq3t'>
+      <CldUploadWidget onUpload={onUpload} uploadPreset='t6rstq3t'>
              {
               ({open})=> {
                 const onClick =()=>{
